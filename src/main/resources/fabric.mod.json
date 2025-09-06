@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "sprint404",
+  "version": "${version}",
+  "name": "Sprint404",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/sprint404/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.Moonlight.sprint404.client.Sprint404DataGenerator"
+    ],
+    "client": [
+      "org.Moonlight.sprint404.client.Sprint404Client"
+    ],
+    "main": [
+      "org.Moonlight.sprint404.Sprint404"
+    ]
+  },
+  "mixins": [
+    "sprint404.mixins.json",
+    {
+      "config": "sprint404.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
